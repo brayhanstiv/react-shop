@@ -18,7 +18,7 @@
 
 
 ![Shop main page](https://github.com/brayhanstiv/react-shop/blob/main/src/assets/scrrenshots/Captura%20de%20pantalla%202023-05-05%20224431.png)
-This project is an SPA e-commerce, it receives the products from an API. This project has many views like: Login, create account, home account, new password, orders, password recovery and email send. You can see the project [here](https://react-shop-monoald.netlify.app/) deployed on netlify.
+This project is an SPA e-commerce, it receives the products from an API. This project has many views like: Login, create account, home account, new password, orders, password recovery and email send. You can see the project [here](https://eclectic-sprite-d9692e.netlify.app) deployed on netlify.
 ## Environment Configuration
 Simple npm v9.6.0 environment, this project is minify with **Webpack** and transpiled with **Babel** for a great browser compatibility. 
 ### Installation
