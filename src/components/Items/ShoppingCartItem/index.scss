@@ -1,0 +1,28 @@
+@import "@styles/vars";
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.shopping-cart figure img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  justify-self: start;
+  margin-right: 20px;
+}
+
+.shopping-cart p:nth-child(2) {
+  color: $very-light-pink;
+  font-size: $sm;
+  justify-self: start;
+}
+
+.shopping-cart p:nth-child(3) {
+  font-size: $md;
+  font-weight: bold;
+  margin-right: 10px;
+}

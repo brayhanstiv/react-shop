@@ -1,0 +1,51 @@
+@import "@styles/vars";
+
+.mobile-menu {
+  display: flex;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: $white;
+  border: 1px solid $very-light-pink;
+  border-radius: 6px;
+}
+
+.mobile-menu ul {
+  margin: 24px 0 0;
+}
+
+.mobile-menu ul:nth-child(1) {
+  border-bottom: 1px solid $very-light-pink;
+}
+
+.mobile-menu a {
+  display: inline-block;
+  color: $black;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.mobile-menu .email {
+  font-size: $sm;
+  font-weight: 300;
+}
+
+.mobile-menu .email a {
+  font-size: $sm;
+  font-weight: 300;
+}
+
+.mobile-menu .sign-out {
+  font-size: $sm;
+  font-weight: normal;
+  color: $hospital-green;
+}
+
+@media (min-width: 620px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}

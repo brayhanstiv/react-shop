@@ -1,0 +1,22 @@
+@import "@styles/vars";
+
+.not-found {
+  display: grid;
+  place-items: center;
+  height: 95vh;
+  text-align: center;
+  color: $very-light-pink;
+}
+
+.html-code {
+  font-size: 30rem;
+  color: $very-light-pink;
+}
+
+.error {
+  font-size: 5rem;
+}
+
+.paragraph {
+  font-size: 2rem;
+}

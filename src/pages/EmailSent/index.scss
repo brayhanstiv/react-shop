@@ -1,0 +1,16 @@
+@import "@styles/vars";
+
+.email-image {
+  display: grid;
+  place-items: center;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background-color: $text-input-field;
+  justify-self: center;
+  margin-bottom: 24px;
+}
+
+.email-image img {
+  width: 80px;
+}

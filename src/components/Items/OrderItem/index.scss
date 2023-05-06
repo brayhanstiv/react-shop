@@ -1,0 +1,28 @@
+@import "@styles/vars";
+
+.order-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.order-item figure img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  justify-self: start;
+  margin-right: 20px;
+}
+
+.order-item p:nth-child(2) {
+  color: $very-light-pink;
+  font-size: $sm;
+  justify-self: start;
+}
+
+.order-item p:nth-child(3) {
+  font-size: $md;
+  font-weight: bold;
+  margin-right: 10px;
+}

@@ -1,0 +1,14 @@
+@import "@styles/vars";
+
+.shopping-cart-aside {
+  box-sizing: border-box;
+  position: fixed;
+  width: 360px;
+  height: 100vh;
+  top: 48px;
+  right: 0;
+  padding: 2rem;
+  border: 1px solid $very-light-pink;
+  border-radius: 10px;
+  background-color: $white;
+}

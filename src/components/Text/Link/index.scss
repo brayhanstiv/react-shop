@@ -1,0 +1,15 @@
+@import "@styles/vars";
+
+.link {
+  font-size: $sm;
+  justify-self: center;
+  padding: 2rem 0;
+}
+
+.link span {
+  color: $very-light-pink;
+}
+
+.link a {
+  color: $hospital-green;
+}

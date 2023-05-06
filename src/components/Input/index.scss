@@ -1,0 +1,18 @@
+@import "@styles/vars";
+
+.input {
+  display: block;
+  background-color: $text-input-field;
+  border-radius: 8px;
+  height: 32px;
+  font-size: $md;
+  padding: 8px;
+  margin-bottom: 12px;
+  width: 95%;
+}
+
+.input-name,
+.input-password,
+.input-email {
+  margin-bottom: 22px;
+}

@@ -1,0 +1,26 @@
+@import "@styles/vars";
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $text-input-field;
+}
+
+.order-info span:nth-child(1) {
+  display: block;
+  font-size: $md;
+  font-weight: bold;
+}
+
+.order-info span:nth-child(2) {
+  color: $very-light-pink;
+  font-size: $xs;
+}
+
+.order-info p {
+  font-size: $md;
+  font-weight: bold;
+}

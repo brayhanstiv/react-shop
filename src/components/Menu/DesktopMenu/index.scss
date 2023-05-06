@@ -1,0 +1,68 @@
+@import "@styles/vars";
+
+.header-icon {
+  display: none;
+}
+
+.header,
+.header ul,
+.header-right ul {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li a {
+  color: $very-light-pink;
+  border: 1px solid $white;
+  font-size: $sm;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.header ul li a:hover,
+.is-active {
+  border: 1px solid $hospital-green;
+  color: $hospital-green;
+}
+
+.header-logo {
+  width: 120px;
+}
+
+.header-email {
+  color: $very-light-pink;
+  margin-right: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.header-shopping-cart {
+  position: relative;
+}
+
+.header-shopping-cart div {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  background-color: $hospital-green;
+  border-radius: 50%;
+  font-size: $sm;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  .header-icon {
+    display: block;
+  }
+
+  .header ul,
+  .header-email {
+    display: none;
+  }
+}

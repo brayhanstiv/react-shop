@@ -1,0 +1,50 @@
+@import "@styles/vars";
+
+.product-card {
+  cursor: pointer;
+}
+
+.product-card img {
+  border-radius: 20px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.product-info p:nth-child(1) {
+  font-size: $md;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.product-info p:nth-child(2) {
+  font-size: $sm;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $very-light-pink;
+}
+
+.product-info p:nth-child(3) {
+  font-size: $xxs;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $very-light-pink;
+}
+
+.product-icon img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .product-card > img {
+    height: 140px;
+  }
+}

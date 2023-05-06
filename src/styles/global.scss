@@ -1,0 +1,79 @@
+@import "@styles/vars";
+
+body,
+html {
+  font-family: "Quicksand", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure,
+aside,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+aside {
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $hospital-green;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.main-container {
+  margin: 20px 15rem;
+}
+
+.align-start {
+  text-align: start;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.inactive {
+  display: none !important;
+}
+
+.label {
+  font-size: $sm;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: $md;
+  color: $very-light-pink;
+  margin: 8px 0 32px 0;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    margin: 10rem 20px;
+  }
+}

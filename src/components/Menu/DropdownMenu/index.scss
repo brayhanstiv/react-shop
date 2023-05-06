@@ -1,0 +1,41 @@
+@import "@styles/vars";
+
+.dropdown-menu {
+  position: absolute;
+  top: 48px;
+  right: 40px;
+  width: 100px;
+  height: auto;
+  border: 1px solid $very-light-pink;
+  border-radius: 6px;
+  padding: 20px 20px 0 20px;
+  background: $white;
+}
+
+.dropdown-menu ul li {
+  text-align: end;
+}
+
+.dropdown-menu ul li:last-child {
+  padding-top: 20px;
+  border-top: 1px solid $very-light-pink;
+}
+
+.dropdown-menu ul li a {
+  display: inline-block;
+  color: $black;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: $md;
+}
+
+.dropdown-menu ul li:last-child a {
+  color: $hospital-green;
+  font-weight: normal;
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    display: none;
+  }
+}

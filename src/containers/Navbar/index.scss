@@ -1,0 +1,14 @@
+@import "@styles/vars";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid $very-light-pink;
+}
+
+@media (max-width: 576px) {
+  .navbar .menu {
+    display: block;
+  }
+}
