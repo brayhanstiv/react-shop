@@ -8,9 +8,22 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].[contenthash].js",
+    publicPath: "./",
+    assetModuleFilename: "assets/img/[hash][ext][query]",
   },
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+      "@assets": path.resolve(__dirname, "src/assets/"),
+      "@containers": path.resolve(__dirname, "src/containers/"),
+      "@context": path.resolve(__dirname, "src/context/"),
+      "@components": path.resolve(__dirname, "src/components/"),
+      "@hooks": path.resolve(__dirname, "src/hooks/"),
+      "@pages": path.resolve(__dirname, "src/pages/"),
+      "@styles": path.resolve(__dirname, "src/styles/"),
+      "@routes": path.resolve(__dirname, "src/routes/"),
+      "@utils": path.resolve(__dirname, "src/utils/"),
+    },
   },
   module: {
     rules: [
@@ -26,7 +39,11 @@ module.exports = {
       },
       {
         test: /.s[ac]ss$/,
-        use: ["css-loader", "style-loader", "sass-loader"],
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        loader: "file-loader",
       },
     ],
   },
