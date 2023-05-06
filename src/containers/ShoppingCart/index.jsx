@@ -1,5 +1,6 @@
 // Packages
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 // Context
 import AppContext from "@context/appContext";
@@ -32,7 +33,9 @@ const ShoppingCart = () => {
         total={total}
         quantity={cart.length}
       />
-      <PrimaryButton text='Checkout' style={{ marginTop: "1rem" }} />
+      <Link to='/checkout'>
+        <PrimaryButton text='Checkout' style={{ marginTop: "1rem" }} />
+      </Link>
     </aside>
   );
 };

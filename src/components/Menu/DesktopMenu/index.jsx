@@ -38,7 +38,7 @@ const DesktopMenu = () => {
           {navRoutes.map((route, index) => (
             <li key={index}>
               <NavLink
-                to={`${route.id}`}
+                to={route.to}
                 className={({ isActive }) => (isActive ? "is-active" : "")}
               >
                 {route.name}

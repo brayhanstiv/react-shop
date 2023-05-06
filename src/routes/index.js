@@ -68,27 +68,27 @@ const routes = [
 
 const navRoutes = [
   {
-    id: "",
+    to: "/",
     name: "All",
   },
   {
-    id: "1",
+    to: "/",
     name: "Clothes",
   },
   {
-    id: "2",
+    to: "/",
     name: "Electronics",
   },
   {
-    id: "3",
+    to: "/",
     name: "Furnitures",
   },
   {
-    id: "4",
+    to: "/",
     name: "Shoes",
   },
   {
-    id: "5",
+    to: "/",
     name: "Others",
   },
 ];
@@ -126,11 +126,11 @@ const mobileRoutes = [
   ],
   [
     {
-      to: "/",
+      to: "/orders",
       name: "My orders",
     },
     {
-      to: "/",
+      to: "/account",
       name: "My account",
     },
   ],

@@ -1,5 +1,8 @@
 // Packages
-import React from "react";
+import React, { useContext } from "react";
+
+// Context
+import AppContext from "@context/appContext";
 
 // Styles
 import "./index.scss";
@@ -14,14 +17,20 @@ import {
 } from "@components";
 
 const CheckoutPage = () => {
+  const {
+    state: { cart },
+  } = useContext(AppContext);
+
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+
   return (
     <MainLayout main={false}>
       <Title text='Checkout' />
       <ContentLayout>
-        <OrderInfo />
-
-        <OrderItem />
-        <OrderItem />
+        <OrderInfo total={total} quantity={cart.length} />
+        {cart.map((item, index) => (
+          <OrderItem key={index} product={item} />
+        ))}
       </ContentLayout>
     </MainLayout>
   );
