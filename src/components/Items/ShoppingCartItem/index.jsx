@@ -10,7 +10,7 @@ import { Close } from "@assets";
 // Styles
 import "./index.scss";
 
-const ShoppingCartItem = ({ product, indexValue }) => {
+const ShoppingCartItem = ({ product }) => {
   const { removeFromCart } = useContext(AppContext);
 
   return (
@@ -20,7 +20,7 @@ const ShoppingCartItem = ({ product, indexValue }) => {
       </figure>
       <p>{product.title}</p>
       <p>${product.price}</p>
-      <img onClick={() => removeFromCart(indexValue)} src={Close} alt='close' />
+      <img onClick={() => removeFromCart(product.id)} src={Close} alt='close' />
     </div>
   );
 };

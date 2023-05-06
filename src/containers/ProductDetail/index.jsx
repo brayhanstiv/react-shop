@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 
 // Assets
-import { AddToCart, Close } from "@assets";
+import { AddToCart, AddedToCart, Close } from "@assets";
 
 // Context
 import AppContext from "@context/appContext";
@@ -12,9 +12,18 @@ import "./index.scss";
 
 const ProductDetail = () => {
   const {
-    state: { product },
+    state: { cart, product },
+    addToCart,
     closeDetail,
   } = useContext(AppContext);
+
+  const isAdded = cart.find((item) => item.id === product.id);
+
+  const handleCart = () => {
+    if (!isAdded) {
+      addToCart(product);
+    }
+  };
 
   return (
     <aside className='aside-detail aside-viewport'>
@@ -27,9 +36,14 @@ const ProductDetail = () => {
         <p className='product-title'>{product.title}</p>
         <p className='product-category'>{product.category.name}</p>
         <p className='product-description'>{product.description}</p>
-        <button className='primary-button add-to-cart-button'>
-          <img src={AddToCart} alt='add-to-cart' />
-          Add to cart
+        <button
+          className={`${
+            isAdded ? "secondary-button" : "primary-button"
+          } add-to-cart-button`}
+          onClick={handleCart}
+        >
+          <img src={isAdded ? AddedToCart : AddToCart} alt='add-to-cart' />
+          {isAdded ? "Added to cart" : "Add to cart"}
         </button>
       </div>
     </aside>

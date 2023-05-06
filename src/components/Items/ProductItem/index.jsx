@@ -1,21 +1,29 @@
 // Packages
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 // Context
 import AppContext from "@context/appContext";
 
 // Images
-import { AddToCart } from "@assets";
+import { AddToCart, AddedToCart } from "@assets";
 
 // Styles
 import "./index.scss";
 
 const ProductItem = ({ product }) => {
-  const { addToCart, setProduct } = useContext(AppContext);
+  const {
+    state: { cart },
+    addToCart,
+    setProduct,
+  } = useContext(AppContext);
+
+  const isAdded = cart.find((index) => index.id === product.id);
 
   const handleCart = (e) => {
     e.stopPropagation();
-    addToCart(product);
+    if (!isAdded) {
+      addToCart(product);
+    }
   };
 
   return (
@@ -28,7 +36,7 @@ const ProductItem = ({ product }) => {
           <p>{product.category.name}</p>
         </div>
         <figure className='product-icon' onClick={handleCart}>
-          <img src={AddToCart} alt='cart' />
+          <img src={isAdded ? AddedToCart : AddToCart} alt='cart' />
         </figure>
       </div>
     </div>

@@ -2,13 +2,21 @@
 
 .navbar {
   display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 97vw;
   justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid $very-light-pink;
+  background-color: white;
 }
 
 @media (max-width: 576px) {
   .navbar .menu {
     display: block;
+  }
+  .navbar {
+    width: 95%;
   }
 }
