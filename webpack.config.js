@@ -9,7 +9,6 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     filename: "[name].[contenthash].js",
     publicPath: "/",
-    assetModuleFilename: "assets/img/[hash][ext][query]",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -43,7 +42,14 @@ module.exports = {
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
-        loader: "file-loader",
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "assets/[hash].[ext]",
+            },
+          },
+        ],
       },
     ],
   },
@@ -63,7 +69,7 @@ module.exports = {
       filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "./assets/css/[name].[contenthash].css",
+      filename: "assets/css/[name].[contenthash].css",
     }),
   ],
 };
