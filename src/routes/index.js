@@ -15,6 +15,7 @@ import { CheckoutPage, OrdersPage, SignUpPage } from "../pages";
 const routes = [
   {
     path: "/",
+    basename: "/react-shop",
     element: <App />,
     children: [
       {
