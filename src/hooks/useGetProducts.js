@@ -6,7 +6,7 @@ const useGetProducts = (id) => {
   const [products, setProducts] = useState([]);
   let API;
 
-  if (id) {
+  if (id && typeof id === "number") {
     API = `https://api.escuelajs.co/api/v1/categories/${id}/products?limit=20&offset=0`;
   } else {
     API = "https://api.escuelajs.co/api/v1/products?limit=20&offset=0";
