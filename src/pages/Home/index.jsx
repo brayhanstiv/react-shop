@@ -1,5 +1,5 @@
 // Packages
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 // Context
@@ -17,6 +17,10 @@ const HomePage = () => {
   const { state } = useContext(AppContext);
 
   const products = useGetProducts(id);
+
+  useEffect(() => {
+    console.log(typeof id);
+  }, [id]);
 
   return (
     <section className='cards-container' style={{ margin: "5rem" }}>
