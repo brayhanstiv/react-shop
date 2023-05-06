@@ -5,7 +5,7 @@
 		<img src="https://img.shields.io/badge/Library-React%20JS-blue?style=flat" />
 	</a>
 	<a href="https://www.npmjs.com/" target="_blank">	
-		<img src="https://img.shields.io/badge/npm-8.6.0-d32d1d?style=flat" />
+		<img src="https://img.shields.io/badge/npm-9.6.0-d32d1d?style=flat" />
 	</a>
 	<a href="https://api.escuelajs.co/docs/" target="_blank">	
 		<img src="https://img.shields.io/badge/API-Escuela%20JS-98ca3f?style=flat" />
